@@ -13,7 +13,7 @@ const Header = () => {
             <Image
               src={siteConfig.logoImage}
               alt={siteConfig.logoAltText}
-              className="h-15 w-auto shrink-0 object-contain"
+              className="h-20 w-auto shrink-0 object-contain"
               height={200}
               width={370}
             />
