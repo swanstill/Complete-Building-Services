@@ -74,8 +74,8 @@ const ReviewCard = ({ review, sourceImage, sourceAlt }: ReviewCardProps) => {
         </div>
 
         <img
-          src={sourceImage || "/icons/facebook.svg"}
-          alt={sourceAlt || "Facebook"}
+          src={sourceImage || "/icons/checkatrade-review.png"}
+          alt={sourceAlt || "Checkatrade"}
           className="w-8 h-8 shrink-0 object-contain"
           width={32}
           height={32}

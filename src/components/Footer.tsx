@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/SiteConfig";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -7,9 +8,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap items-center md:justify-between max-md:flex-col gap-6">
           <div>
-            <h1 className="text-white font-bold text-2xl md:text-3xl">
-              {siteConfig.companyName}
-            </h1>
+            <Image
+              src={siteConfig.logoImage}
+              alt={siteConfig.logoAltText}
+              className="h-15 w-auto shrink-0 object-left object-contain"
+              height={200}
+              width={370}
+            />
           </div>
 
           <ul className="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6 text-white">

@@ -9,8 +9,8 @@ const MeetOwner = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-xl overflow-hidden shadow-md">
           {/* LEFT — Full photo */}
           <div className="relative min-h-100 lg:min-h-145">
-            <Image
-              src="/images/billyjoe-docherty.jpg"
+              <Image
+              src="/images/owner-image.jpg"
               alt="Pat"
               fill
               className="object-cover object-top"
@@ -20,15 +20,18 @@ const MeetOwner = () => {
           <div className="bg-gray-50 flex flex-col justify-center px-8 md:px-12 py-10 gap-5">
             <div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
-                Meet Pat — Director of Peakdale Roofing & Building
+                Meet Layton — Director of Complete Complete Roofing & Building Services
               </h2>
               <p className="text-lg md:text-xl font-semibold text-gray-700 mt-1">
-                Your Local Roofer in Chesterfield & Surrounding Areas
+                We&apos;re Your Local Roofing Company across{" "}
+                <span style={{ color: siteConfig.brand.primary }}>
+                  Swindon, Royal Wootton Bassett, and nearby towns.
+                </span>
               </p>
             </div>
 
             <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-              At Peakdale Roofing and Contractors we are more than just a roofing
+              At Complete Complete Roofing & Building Services we are more than just a roofing
               company, we pride ourselves on being your trusted experts for all
               things roofing. Whether you&apos;re refurbishing your home, repairing
               damage, or in need of a brand-new roof, our team of skilled

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar - White background */}
-      <section className="flex flex-col gap-4 p-4 bg-white md:flex-row md:items-center md:justify-between md:px-16 md:py-4">
+      <section className="flex flex-col gap-4 p-4 md:flex-row md:items-center md:justify-between md:px-16 md:py-4" style={{ backgroundColor: "#4A4645" }}>
         {/* Mobile: 2 rows x 2 cols */}
         <div className="grid grid-cols-2 gap-4 md:hidden">
           <Link href="/" aria-label={siteConfig.logoAltText}>
@@ -20,12 +20,12 @@ const Header = () => {
           </Link>
           <a
             target="_blank"
-            href="https://www.facebook.com/profile.php?id=61565243171665"
+            href="https://www.checkatrade.com/trades/checktrade"
           >
             <div className="flex h-[60px] w-full items-center justify-center">
               <Image
-                src="/icons/facebook-widget.png"
-                alt="Facebook Reviews"
+                src="/icons/check-trade.png"
+                alt="Check Trade"
                 className="h-full w-auto object-contain"
                 width={180}
                 height={60}
@@ -34,26 +34,12 @@ const Header = () => {
           </a>
           <a
             target="_blank"
-            href="https://www.myjobquote.co.uk/t/peakdale-roofing"
+            href="https://www.trustatrader.com/traders/complete-building-services-roofers-roofing-swindon"
           >
             <div className="flex h-[60px] w-full items-center justify-center">
               <Image
-                src="/icons/myjobquote-widget.png"
-                alt="My Job Quote"
-                className="h-full w-auto object-contain"
-                width={180}
-                height={60}
-              />
-            </div>
-          </a>
-          <a
-            target="_blank"
-            href="https://share.google/eewd9ZEPoBsN6jB3G"
-          >
-            <div className="flex h-[60px] w-full items-center justify-center">
-              <Image
-                src="/icons/bark-widget.png"
-                alt="Bark Reviews"
+                src="/icons/trust-trader.png"
+                alt="Trust Trader Reviews"
                 className="h-full w-auto object-contain"
                 width={180}
                 height={60}
@@ -75,11 +61,11 @@ const Header = () => {
               />
             </Link>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-white">
             <Image
               src="/images/headphone.svg"
               alt="Headphone"
-              className="h-5 w-5 md:h-7.5 md:w-7.5"
+              className="h-5 w-5 md:h-7.5 md:w-7.5 brightness-0 invert"
               width={20}
               height={20}
             />
@@ -96,12 +82,12 @@ const Header = () => {
             <a
               target="_blank"
               className="hidden min-w-0 md:flex"
-              href="https://www.facebook.com/profile.php?id=61565243171665"
+              href="https://www.checkatrade.com/trades/checktrade"
             >
               <div className="flex h-[60px] w-full items-center justify-center md:w-[180px]">
                 <Image
-                  src="/icons/facebook-widget.png"
-                  alt="Facebook Reviews"
+                  src="/icons/check-trade.png"
+                  alt="Check Trade"
                   className="h-full w-auto object-contain"
                   width={180}
                   height={60}
@@ -111,27 +97,12 @@ const Header = () => {
             <a
               target="_blank"
               className="hidden min-w-0 md:flex"
-              href="https://share.google/eewd9ZEPoBsN6jB3G"
+              href="https://www.trustatrader.com/traders/complete-building-services-roofers-roofing-swindon"
             >
               <div className="flex h-[60px] w-full items-center justify-center md:w-[180px]">
                 <Image
-                  src="/icons/bark-widget.png"
-                  alt="Bark Reviews"
-                  className="h-full w-auto object-contain"
-                  width={180}
-                  height={60}
-                />
-              </div>
-            </a>
-            <a
-              target="_blank"
-              className="hidden min-w-0 md:flex"
-              href="https://www.myjobquote.co.uk/t/peakdale-roofing"
-            >
-              <div className="flex h-[60px] w-full items-center justify-center md:w-[180px]">
-                <Image
-                  src="/icons/myjobquote-widget.png"
-                  alt="My Job Quote"
+                  src="/icons/trust-trader.png"
+                  alt="Trust Trader Reviews"
                   className="h-full w-auto object-contain"
                   width={180}
                   height={60}

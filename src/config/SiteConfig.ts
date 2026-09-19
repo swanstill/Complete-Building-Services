@@ -1,29 +1,29 @@
 import { SiteConfig } from "@/lib/types";
 
 export const siteConfig: SiteConfig = {
-  companyName: "Peakdale Roofing And Building",
+  companyName: "Complete Complete Roofing & Building Services",
   logoImage: "/icons/logo.jpg",
-  logoAltText: "Peakdale Roofing And Building Logo",
+  logoAltText: "Complete Complete Roofing & Building Services Logo",
   heroSloganPrimary:
-    " We're Your Local Roofer",
+    "We're Your Local Roofing Company across",
   heroSloganSecondary: "Family-Run & Fully Accredited",
-  locationPrimary: "In Chesterfield & Surrounding Areas",
+  locationPrimary: "Swindon, Royal Wootton Bassett, and nearby towns.",
   foundedYear: "20+ Years Experience",
-  reviewScore: "5/5",
-  reviewCount: "4160",
-  guaranteeYears: "20 Year Guarantee",
+  reviewScore: "9.81/10",
+  reviewCount: "49",
+  guaranteeYears: "All Work Guaranteed",
   insurredInfo: "Fully Accredited",
   jobsCompleted: "4,160+ Projects Completed",
-  phoneNumber: "+44 7450 474790",
+  phoneNumber: "+44 7787 782020",
   emailAddress: "info@roofexltd.co.uk",
   ctaTextPrimary: "Get My Free Quote",
   ctaTextSecondary: "Call Us",
-  heroImage: "/images/hero-image.jpeg",
-  heroImageAltText: "Peakdale Roofing And Building Hero Image",
+  heroImage: "/images/hero-image.jpg",
+  heroImageAltText: "Complete Complete Roofing & Building Services Hero Image",
   heroTitle:
-    "We're Your Local Roofer",
+    "We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
   heroDescription:
-    "Local roofing experts serving Chesterfield and the surrounding 30-minute drive area with over 20 years of experience, 4,160+ jobs completed, and a 20-year guarantee on every roof.",
+    "Local roofing experts serving Swindon, Royal Wootton Bassett and the surrounding area with over 20 years of experience, 4,160+ jobs completed, and a 20-year guarantee on every roof.",
   galleryImages: [
     "/gallery/09090.jpeg",
     "/gallery/1413.jpeg",
@@ -42,90 +42,118 @@ export const siteConfig: SiteConfig = {
   checkatradeRatingImage: "/images/checkatrade-badge.png",
   faqData: [
     {
-      question: "How would I know if my roof needs repairing or replacing?",
+      question: "How do I know if my roof needs repairing?",
       answer:
-        "You may need roof repairs or replacement if you notice issues such as leaks, missing tiles, sagging, or visible damage. Our team can carry out a thorough inspection to determine the best solution and recommend whether a repair or full replacement is the most cost-effective option.",
+        "Common signs include leaks, water stains on ceilings, missing or cracked tiles, sagging roof sections, and damaged flashing around chimneys or vents. If you've noticed any of these issues, we offer a free inspection to assess the condition of your roof and recommend the best course of action.",
     },
     {
       question: "Do you offer emergency roof repairs?",
       answer:
-        "Yes, we offer emergency roof repair services to quickly address leaks, storm damage, or any urgent issues. Our team responds promptly to secure your roof and prevent further damage, giving you peace of mind when you need it most.",
+        "Yes, we provide a 24/7 emergency roof repair service across Swindon and surrounding areas. Whether it's storm damage, a sudden leak, or any urgent roofing issue, our team responds quickly to secure your property and prevent further damage. Call us anytime on 07450 474790.",
     },
     {
-      question: "How do you carry out roof inspections?",
+      question: "What roofing services do you provide?",
       answer:
-        "We carry out roof inspections using advanced drone technology, allowing us to safely and accurately assess every part of your roof from above. This ensures no detail is missed and gives us a clear view of any issues without the need for scaffolding or ladders.",
+        "We offer a full range of roofing services including new roof installations, roof repairs, flat roofing (EPDM rubber, felt, GRP fibreglass), pitched roofs, slate and tile roofing, ridge and hip tile re-bedding, fascias, soffits, guttering, chimney repairs, lead work, dry verge and dry ridge systems, roof windows, and moss removal.",
     },
     {
-      question: "Do you provide maintenance services?",
+      question: "How long does a new roof take to install?",
       answer:
-        "Yes, we offer regular maintenance to keep your landscape looking its best all year-round.",
+        "The timeline depends on the size and complexity of the project. A typical residential roof replacement takes between 3 to 7 days. We'll provide a clear timeline with your quote so you know exactly what to expect. Our team works efficiently while maintaining the highest quality standards.",
     },
     {
-      question: "What is the typical lifespan of a roof?",
+      question: "Do you offer guarantees on your work?",
       answer:
-        "The lifespan of a typical roof depends on the materials used, but most last between 20 to 50 years with proper maintenance. Regular inspections and timely repairs can help extend the life of your roof and keep it performing at its best.",
+        "Yes, all our work comes with a guarantee for your peace of mind. We use only high-quality materials and our skilled team takes pride in delivering lasting results. We'll discuss the specific guarantee details for your project before any work begins.",
     },
     {
-      question: "Can you work on both residential and commercial properties?",
+      question: "What areas do you cover?",
       answer:
-        "Yes, we work on both residential and commercial properties, tailoring our services to suit the specific needs of each project. Whether it’s a family home, office building, or industrial property, our experienced team delivers the same high standards of quality and professionalism.",
+        "We're based in Swindon and cover Wiltshire and the surrounding areas, including Royal Wootton Bassett, Highworth, Cricklade, and nearby towns. If you're unsure whether we cover your area, get in touch and we'll be happy to help.",
+    },
+    {
+      question: "Are you insured and accredited?",
+      answer:
+        "Yes, we are fully insured for all the work we carry out. We're proud members of Checkatrade with a 9.81/10 rating from verified reviews. Our team is experienced, professional, and committed to delivering work to the highest industry standards.",
+    },
+    {
+      question: "How much does a roof repair or replacement cost?",
+      answer:
+        "Every project is different, so we offer free, no-obligation quotes tailored to your specific needs. We carry out a thorough inspection first, then provide a detailed breakdown of the work required and the cost. Our pricing is transparent with no hidden fees.",
     },
   ],
   brand: {
-    primary: "#1B53EA",
+    primary: "#FA6237",
     secondary: "#010203",
   },
   seo: {
     baseUrl: "https://peakdaleroofing.co.uk",
-    titleTemplate: "%s | Peakdale Roofing And Building",
+    titleTemplate: "%s | Complete Complete Roofing & Building Services",
     defaultTitle:
-      "We're Your Local Roofer in Chesterfield & Surrounding Areas",
+      "We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
     description:
-      "Local roofing experts serving Chesterfield and the surrounding 30-minute drive area with over 20 years of experience, 4,160+ jobs completed, and a 20-year guarantee on every roof.",
+      "Local roofing experts serving Swindon, Royal Wootton Bassett and the surrounding area with over 20 years of experience, 4,160+ jobs completed, and a 20-year guarantee on every roof.",
     ogImage: "/images/og-default.jpg",
     twitterHandle: "@peakdaleroofing",
   },
   reviewsData: {
-    source: "Facebook",
-    sourceImage: "/icons/facebook.svg",
-    reviewsUrl: "https://www.facebook.com/profile.php?id=61565243171665&sk=reviews",
+    source: "Checkatrade",
+    sourceImage: "/icons/checkatrade.png",
+    reviewsUrl: "https://www.checkatrade.com/trades/CompleteBuildingServices985447",
     reviews: [
       {
-        name: "Ketol Zerdna",
-        serviceType: "Full Roof Replacement",
+        name: "Kevin N",
+        serviceType: "Polycarbonate Roofing Installation",
         rating: 5,
         review:
-          "Just had my whole roof completely redone by PEAKDALE ROOFING & BUILDING, carried out by Pat and his brilliant team, Gabby and Rico. I honestly couldn't be happier with the work. They've done an absolutely brilliant job, the roof looks fantastic, solid and built to last! Pat has been there throughout and has always been happy to answer any questions or concerns I've had. The professionalism, workmanship and attention to detail have been excellent from start to finish. A BIG thank you to Pat, Gabby and Rico for doing such a fantastic job. I would 100% recommend PEAKDALE ROOFING & BUILDING to anyone looking to have roofing work done. And with a 20-year warranty, it gives even more peace of mind. Once again, thank you so much, Pat, Gabby & Rico!",
-        date: "25 August",
-        postalCode: "",
+          "Absolutely phenomenal service. I asked for help on check a trade. I booked with the first company to reply but then they let me down, and I'm glad they did because the moment I asked Layton to quote, I knew this was the right company to book. My (asbestos) garage roof was replaced about 6 years ago and already developed cracks. Layton immediately knew how to fix, was given a quote to fix the damaged part and another quote to sort the whole lot, and went with the latter so I don't have to think about it again anytime soon. Immediately identified what was wrong with previous install and fixed that on top of what was quoted. I am over the moon, team were on time to the minute, clearly experienced professionals who take pride in their work, my only regret is not finding you 6 years ago! I'll be recommending you to everyone... Cheers gents, you're all fabulous!",
+        date: "22 July 2026",
+        postalCode: "SN3",
       },
       {
-        name: "Julie Moore",
-        serviceType: "Roofing Work",
+        name: "Lee",
+        serviceType: "Pitched Roofing Repair",
         rating: 5,
         review:
-          "Absolutely outstanding work they came out gave me a quotation and a reasonable price within a few days they came back out put everything on writing and got the job sorted fast, efficient and affordable I have recommended this company to all my friends and family and a previous job they done in the past they came back out and adjusted it would recommend these to anyone 10 out of 10 five star+ recommendation and a fantastic team",
-        date: "11 August",
-        postalCode: "",
+          "Fantastic contractors. Excellent communication, turned up early, polite to myself and the neighbours, and did a professional quality job. Couldn't recommend enough.",
+        date: "17 July 2026",
+        postalCode: "SN25",
       },
       {
-        name: "Rick Cooke",
-        serviceType: "Bungalow Roof Leak Repair",
+        name: "Claire C",
+        serviceType: "Chimney Cowlings Installation",
         rating: 5,
         review:
-          "hi I contacted peakdale for my mum for her leak on her bungalow roof, they was very helpful and informational on the phone call. they booked my mum in very quickly and the job was done exceptionally good, efficiently and professionally. I give these guys a 10/10 and would recommend them to all my friends and family and will be using them again in the future",
-        date: "24 July",
-        postalCode: "",
+          "Quick to respond. Visited to discuss requirements and options. Competitive price and sorted in two days of visit.",
+        date: "25 June 2026",
+        postalCode: "SN6",
       },
       {
-        name: "Susmi Jos",
-        serviceType: "Roof Repair & Replacement",
+        name: "Anonymous",
+        serviceType: "Slate / Tiled Roofing Installation",
         rating: 5,
         review:
-          "I recently hired a roofing service to repair and replace sections of my roof, and the experience was excellent from start to finish. The team was professional, punctual, and clearly experienced in their work. They conducted a thorough inspection, explained the issues in simple terms, and provided a transparent and fair quote. Communication throughout the project was clear and consistent. They kept me updated on progress and were always available to answer questions. The project was completed on time. I would highly recommend this roofing service to anyone looking for reliable, skilled, and trustworthy professionals. Their commitment to quality and customer satisfaction truly sets them apart.",
-        date: "1 May",
-        postalCode: "",
+          "Arrived on time and replaced my complete roof in the time Layton said he would and left everything clean at the end of each day they were here. I have already recommended Layton to my mum.",
+        date: "16 March 2026",
+        postalCode: "SN1",
+      },
+      {
+        name: "Anonymous",
+        serviceType: "Ridged Tiles Repair",
+        rating: 5,
+        review:
+          "We had a leak due to the recent rain I got in touch with Layton he came and found the problem and we arranged a date for the work to be completed. Everything was done as planned and we have not had a leak since.",
+        date: "09 March 2026",
+        postalCode: "SN3",
+      },
+      {
+        name: "Anonymous",
+        serviceType: "Roof Repair",
+        rating: 5,
+        review:
+          "I had water stains on my bedroom ceiling got in touch with Layton he came out found the problem was broken tiles had put a hole in my felt and letting water in when it rained we booked Layton in to fix the roof he turned up repaired the felt and replaced the broken tiles. Thanks for a quick professional response.",
+        date: "02 July 2026",
+        postalCode: "SN3",
       },
     ],
   },
@@ -269,28 +297,28 @@ export const siteConfig: SiteConfig = {
   },
   workGallery: {
     headline: "Recent Projects Completed",
-    caption: "Quality work delivered by Peakdale Roofing And Building",
+    caption: "Quality work delivered by Complete Complete Roofing & Building Services",
     images: [
-      "/gallery/work-1.webp",
-      "/gallery/work-2.webp",
-      "/gallery/work-3.webp",
-      "/gallery/work-4.webp",
-      "/gallery/work-5.webp",
-      "/gallery/work-6.webp",
-      "/gallery/work-7.webp",
-      "/gallery/work-8.webp",
-      "/gallery/work-9.webp",
-      "/gallery/work-10.webp",
-      "/gallery/work-11.webp",
-      "/gallery/work-12.webp",
+      "/gallery/project-1.jpg",
+      "/gallery/project-2.jpg",
+      "/gallery/project-3.jpg",
+      "/gallery/project-4.jpg",
+      "/gallery/project-5.jpg",
+      "/gallery/project-6.jpg",
+      "/gallery/project-7.jpg",
+      "/gallery/project-8.jpg",
+      "/gallery/project-9.jpg",
+      "/gallery/project-10.jpg",
+      "/gallery/project-11.jpg",
+      "/gallery/project-12.jpg",
     ],
   },
   ownerInfo: {
     headline: "Meet Pat",
-    text: "“Hi, I'm Pat and I've been roofing in Chesterfield and the surrounding area for over 20 years. If I wouldn't accept it on my own home, it doesn't go on yours.”",
+    text: "“Hi, I'm Pat and I've been roofing in Swindon, Royal Wootton Bassett and the surrounding area for over 20 years. If I wouldn't accept it on my own home, it doesn't go on yours.”",
     bulletPoints: [
       "4,160+ Projects Completed Locally",
-      "5/5 Verified Facebook Reviews",
+      "9.81/10 Verified Checkatrade Reviews",
       "20-Year Guarantee & Fixed Pricing",
     ],
     ownerImage: "/images/team-image.jpeg",

@@ -22,7 +22,7 @@ const HowitWorksCard = ({
           className="mx-auto object-cover rounded-lg"
           style={{
             filter:
-              "invert(45%) sepia(80%) saturate(400%) hue-rotate(170deg) brightness(95%)",
+              "invert(51%) sepia(87%) saturate(1100%) hue-rotate(11deg) brightness(101%) contrast(105%)",
           }}
         />
       </div>

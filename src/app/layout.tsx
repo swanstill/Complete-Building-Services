@@ -13,8 +13,8 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 export const metadata: Metadata = {
-  title: "Peakdale Roofing And Building - We're Your Local Roofer in Chesterfield & Surrounding Areas",
-  description: "Peakdale Roofing And Building - We're Your Local Roofer in Chesterfield & Surrounding Areas",
+  title: "Complete Complete Roofing & Building Services - We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
+  description: "Complete Complete Roofing & Building Services - We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
 };
 
 export default function RootLayout({
