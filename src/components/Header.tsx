@@ -7,13 +7,13 @@ const Header = () => {
     <>
       {/* Top Bar - White background */}
       <section className="flex flex-col gap-4 p-4 md:flex-row md:items-center md:justify-between md:px-16 md:py-4" style={{ backgroundColor: "#4A4645" }}>
-        {/* Mobile: row 1 = logo, row 2 = badges */}
+        {/* Mobile: row 1 = logo centered, row 2 = badges */}
         <div className="flex flex-col gap-3 md:hidden">
-          <Link href="/" aria-label={siteConfig.logoAltText}>
+          <Link href="/" aria-label={siteConfig.logoAltText} className="flex justify-center">
             <Image
               src={siteConfig.logoImage}
               alt={siteConfig.logoAltText}
-              className="h-15 w-auto shrink-0 object-left object-contain"
+              className="h-15 w-auto shrink-0 object-contain"
               height={200}
               width={370}
             />
@@ -23,13 +23,13 @@ const Header = () => {
               target="_blank"
               href="https://www.checkatrade.com/trades/checktrade"
             >
-              <div className="flex h-[50px] w-full items-center justify-center">
+              <div className="flex h-[70px] w-full items-center justify-center">
                 <Image
                   src="/icons/check-trade.png"
                   alt="Check Trade"
                   className="h-full w-auto object-contain"
                   width={180}
-                  height={60}
+                  height={70}
                 />
               </div>
             </a>
@@ -37,13 +37,13 @@ const Header = () => {
               target="_blank"
               href="https://www.trustatrader.com/traders/complete-building-services-roofers-roofing-swindon"
             >
-              <div className="flex h-[50px] w-full items-center justify-center">
+              <div className="flex h-[70px] w-full items-center justify-center">
                 <Image
                   src="/icons/trust-trader.png"
                   alt="Trust Trader Reviews"
                   className="h-full w-auto object-contain"
                   width={180}
-                  height={60}
+                  height={70}
                 />
               </div>
             </a>
