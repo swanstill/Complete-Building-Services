@@ -7,8 +7,8 @@ const Header = () => {
     <>
       {/* Top Bar - White background */}
       <section className="flex flex-col gap-4 p-4 md:flex-row md:items-center md:justify-between md:px-16 md:py-4" style={{ backgroundColor: "#4A4645" }}>
-        {/* Mobile: 2 rows x 2 cols */}
-        <div className="grid grid-cols-2 gap-4 md:hidden">
+        {/* Mobile: row 1 = logo, row 2 = badges */}
+        <div className="flex flex-col gap-3 md:hidden">
           <Link href="/" aria-label={siteConfig.logoAltText}>
             <Image
               src={siteConfig.logoImage}
@@ -18,34 +18,36 @@ const Header = () => {
               width={370}
             />
           </Link>
-          <a
-            target="_blank"
-            href="https://www.checkatrade.com/trades/checktrade"
-          >
-            <div className="flex h-[60px] w-full items-center justify-center">
-              <Image
-                src="/icons/check-trade.png"
-                alt="Check Trade"
-                className="h-full w-auto object-contain"
-                width={180}
-                height={60}
-              />
-            </div>
-          </a>
-          <a
-            target="_blank"
-            href="https://www.trustatrader.com/traders/complete-building-services-roofers-roofing-swindon"
-          >
-            <div className="flex h-[60px] w-full items-center justify-center">
-              <Image
-                src="/icons/trust-trader.png"
-                alt="Trust Trader Reviews"
-                className="h-full w-auto object-contain"
-                width={180}
-                height={60}
-              />
-            </div>
-          </a>
+          <div className="grid grid-cols-2 gap-3">
+            <a
+              target="_blank"
+              href="https://www.checkatrade.com/trades/checktrade"
+            >
+              <div className="flex h-[50px] w-full items-center justify-center">
+                <Image
+                  src="/icons/check-trade.png"
+                  alt="Check Trade"
+                  className="h-full w-auto object-contain"
+                  width={180}
+                  height={60}
+                />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.trustatrader.com/traders/complete-building-services-roofers-roofing-swindon"
+            >
+              <div className="flex h-[50px] w-full items-center justify-center">
+                <Image
+                  src="/icons/trust-trader.png"
+                  alt="Trust Trader Reviews"
+                  className="h-full w-auto object-contain"
+                  width={180}
+                  height={60}
+                />
+              </div>
+            </a>
+          </div>
         </div>
 
         {/* Desktop: 3 cols - logo left, phone middle, widgets right */}
