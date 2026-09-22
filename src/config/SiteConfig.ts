@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
   guaranteeYears: "All Work Guaranteed",
   insurredInfo: "Fully Accredited",
   jobsCompleted: "4,160+ Projects Completed",
-  phoneNumber: "+44 7787 782020",
+  phoneNumber: "+44 1793 239742",
   emailAddress: "info@roofexltd.co.uk",
   ctaTextPrimary: "Get My Free Quote",
   ctaTextSecondary: "Call Us",
@@ -329,7 +329,7 @@ export const siteConfig: SiteConfig = {
     buttonPrimary: "Get My Free Quote",
     buttonSecondary: "Call Us",
     buttonPrimaryUrl: "#quote-form",
-    buttonSecondaryUrl: "tel:+447915068323",
+    buttonSecondaryUrl: "tel:+441793239742",
     caption: "Honest pricing | No hidden fees | 20-Year guarantee",
   },
 };
