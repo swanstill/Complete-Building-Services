@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
     {
       question: "Do you offer emergency roof repairs?",
       answer:
-        "Yes, we provide a 24/7 emergency roof repair service across Swindon and surrounding areas. Whether it's storm damage, a sudden leak, or any urgent roofing issue, our team responds quickly to secure your property and prevent further damage. Call us anytime on 07450 474790.",
+        "Yes, we provide a 24/7 emergency roof repair service across Swindon and surrounding areas. Whether it's storm damage, a sudden leak, or any urgent roofing issue, our team responds quickly to secure your property and prevent further damage. Call us anytime on 01793 239742.",
     },
     {
       question: "What roofing services do you provide?",
