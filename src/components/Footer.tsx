@@ -48,10 +48,10 @@ const Footer = () => {
 
         <hr className="my-6 border-gray-500" />
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/3"></div>
-          <p className="text-center text-gray-300 text-base md:w-1/3">
+          <p className="text-gray-300 text-base md:w-1/3 max-md:text-center">
             © {siteConfig.companyName}. All rights reserved.
           </p>
+          <div className="md:w-1/3"></div>
           <Link
             href="https://www.tradesgrow.co.uk/"
             target="_blank"
