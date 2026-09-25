@@ -17,6 +17,10 @@ const Footer = () => {
             />
           </div>
 
+          <div className="text-white text-base max-md:text-center">
+            {siteConfig.address}
+          </div>
+
           <ul className="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6 text-white">
             <Link
               href={`tel:${siteConfig.phoneNumber}`}
@@ -44,9 +48,7 @@ const Footer = () => {
 
         <hr className="my-6 border-gray-500" />
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/3 text-gray-300 text-base max-md:text-center">
-            {siteConfig.address}
-          </div>
+          <div className="md:w-1/3"></div>
           <p className="text-center text-gray-300 text-base md:w-1/3">
             © {siteConfig.companyName}. All rights reserved.
           </p>
