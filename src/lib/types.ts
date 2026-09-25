@@ -12,6 +12,7 @@ export interface SiteConfig {
   jobsCompleted: string;
   phoneNumber: string;
   emailAddress: string;
+  address: string;
   ctaTextPrimary: string;
   ctaTextSecondary: string;
   heroImage: string;

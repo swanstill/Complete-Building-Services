@@ -44,7 +44,9 @@ const Footer = () => {
 
         <hr className="my-6 border-gray-500" />
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/3"></div>
+          <div className="md:w-1/3 text-gray-300 text-base max-md:text-center">
+            {siteConfig.address}
+          </div>
           <p className="text-center text-gray-300 text-base md:w-1/3">
             © {siteConfig.companyName}. All rights reserved.
           </p>

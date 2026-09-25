@@ -16,6 +16,7 @@ export const siteConfig: SiteConfig = {
   jobsCompleted: "4,160+ Projects Completed",
   phoneNumber: "+44 1793 239742",
   emailAddress: "info@roofexltd.co.uk",
+  address: "15 Shaftesbury Centre, Percy Street, Swindon, SN2 2AZ",
   ctaTextPrimary: "Get My Free Quote",
   ctaTextSecondary: "Call Us",
   heroImage: "/images/hero-image.jpg",
