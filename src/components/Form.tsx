@@ -1,16 +1,12 @@
 "use client";
-import { useState } from "react";
 import { siteConfig } from "@/config/SiteConfig";
-import Stepper from "./Stepper";
-import MultiStepForm from "./MultiStepForm";
+import LeadForm from "./LeadForm";
 
 const Form = () => {
-  const [currentStep, setCurrentStep] = useState(0);
-
   return (
     <section
       id="quote-form"
-      className="flex flex-col gap-4 py-8 justify-center items-center px-4"
+      className="flex flex-col gap-6 py-8 justify-center items-center px-4"
       style={{ backgroundColor: siteConfig.brand.primary }}
     >
       {/* Heading */}
@@ -20,13 +16,8 @@ const Form = () => {
         </h2>
       </div>
 
-      {/* Stepper */}
-      <div className="bg-white rounded-xl w-full max-w-5xl mx-auto p-2 md:p-6 overflow-hidden">
-        <Stepper currentStep={currentStep} />
-      </div>
-
-      {/* Multi Step Form */}
-      <MultiStepForm onStepChange={setCurrentStep} />
+      {/* Simple Form */}
+      <LeadForm />
     </section>
   );
 };

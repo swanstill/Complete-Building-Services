@@ -60,15 +60,13 @@ export interface SiteConfig {
   };
   formData: {
     formHeading: string;
-    formSteps: string[];
-    steps: {
-      question: string;
+    fields: {
+      name: string;
+      label: string;
       type: string;
       placeholder?: string;
-      options?: {
-        label: string;
-        icon?: string;
-      }[];
+      autoComplete?: string;
+      hint?: string;
     }[];
   };
   howItWorks: {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
+import MobileStickyBar from "@/components/MobileStickyBar";
 import { Inter, Poppins } from "next/font/google";
 const inter = Inter({
   subsets: ["latin"],
@@ -38,7 +39,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${inter.className} ${poppins.className}`}>
+      <body className={`${inter.className} ${poppins.className} pb-20 md:pb-0`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -50,6 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <Header />
         {children}
+        <MobileStickyBar />
       </body>
     </html>
   );

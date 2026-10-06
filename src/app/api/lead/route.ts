@@ -10,8 +10,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}));
     const {
-      firstName,
-      lastName,
+      fullName,
       email,
       phoneNumber,
       postcode,
@@ -19,13 +18,20 @@ export async function POST(request: Request) {
       timeframe,
     } = body ?? {};
 
-    if (!firstName || !lastName || !phoneNumber || !postcode) {
+    if (!fullName || !email || !phoneNumber) {
       return new Response("Missing fields", { status: 400 });
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return new Response("Invalid email", { status: 422 });
     }
 
     if (!isLikelyUkPhone(phoneNumber)) {
       return new Response("Invalid phone", { status: 422 });
     }
+
+    const [firstName, ...rest] = String(fullName).trim().split(/\s+/);
+    const lastName = rest.join(" ") || "-";
 
     const config = resolveTwilioCredentials();
 
@@ -42,8 +48,8 @@ export async function POST(request: Request) {
       "New Roofing Lead (website)",
       `Name: ${firstName} ${lastName}`,
       `Phone: ${phoneNumber}`,
-      email ? `Email: ${email}` : null,
-      `Postcode: ${postcode}`,
+      `Email: ${email}`,
+      postcode ? `Postcode: ${postcode}` : null,
       propertyType ? `Property: ${propertyType}` : null,
       timeframe ? `Timeframe: ${timeframe}` : null,
     ]
