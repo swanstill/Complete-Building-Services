@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { siteConfig } from "@/config/SiteConfig";
 import { trackLead, trackSubmitForm } from "@/lib/tracking";
 
@@ -13,6 +14,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^(\+?44|0)\d{9,10}$/;
 
 const LeadForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState<LeadFormData>({
     fullName: "",
     email: "",
@@ -20,7 +22,7 @@ const LeadForm = () => {
   });
   const [errors, setErrors] = useState<Partial<LeadFormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => {
     trackLead();
@@ -31,6 +33,7 @@ const LeadForm = () => {
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
+    if (submitError) setSubmitError(null);
   };
 
   const validate = (): boolean => {
@@ -59,6 +62,7 @@ const LeadForm = () => {
     if (!validate() || isSubmitting) return;
 
     setIsSubmitting(true);
+    setSubmitError(null);
     trackSubmitForm({ ...formData });
     try {
       const res = await fetch("/api/lead", {
@@ -66,39 +70,19 @@ const LeadForm = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      if (!res.ok) console.error("Lead API error", await res.text());
+      if (!res.ok) {
+        console.error("Lead API error", await res.text());
+        throw new Error("Lead API error");
+      }
+      router.push("/thank-you");
     } catch (err) {
       console.error("Lead API exception", err);
-    } finally {
+      setSubmitError(
+        "Sorry, something went wrong. Please try again or call us directly."
+      );
       setIsSubmitting(false);
-      setIsSubmitted(true);
     }
   };
-
-  if (isSubmitted) {
-    return (
-      <div className="w-full max-w-5xl mx-auto p-6 text-center py-16">
-        <svg
-          className="mx-auto h-20 w-20 mb-6"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#22c55e"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        <h2 className="text-3xl font-bold mb-3 text-white">Thank You!</h2>
-        <p className="text-lg text-white/80 mb-1">
-          We&apos;ve received your details.
-        </p>
-        <p className="text-white/70">
-          Our team will be in touch with you shortly.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form
@@ -145,6 +129,10 @@ const LeadForm = () => {
           </div>
         ))}
       </div>
+
+      {submitError && (
+        <p className="mt-5 text-sm font-medium text-red-500">{submitError}</p>
+      )}
 
       <button
         type="submit"
