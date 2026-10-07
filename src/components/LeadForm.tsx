@@ -8,10 +8,12 @@ interface LeadFormData {
   fullName: string;
   email: string;
   phoneNumber: string;
+  postcode: string;
 }
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^(\+?44|0)\d{9,10}$/;
+const POSTCODE_REGEX = /^[A-Z]{1,2}\d[A-Z\d]?\s*\d[A-Z]{2}$/i;
 
 const LeadForm = () => {
   const router = useRouter();
@@ -19,6 +21,7 @@ const LeadForm = () => {
     fullName: "",
     email: "",
     phoneNumber: "",
+    postcode: "",
   });
   const [errors, setErrors] = useState<Partial<LeadFormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,6 +54,11 @@ const LeadForm = () => {
       nextErrors.phoneNumber = "Please enter your phone number";
     } else if (!PHONE_REGEX.test(formData.phoneNumber.replace(/[\s\-()]/g, ""))) {
       nextErrors.phoneNumber = "Please enter a valid UK phone number";
+    }
+    if (!formData.postcode.trim()) {
+      nextErrors.postcode = "Please enter your post code";
+    } else if (!POSTCODE_REGEX.test(formData.postcode.trim().replace(/\s+/g, " "))) {
+      nextErrors.postcode = "Please enter a valid UK post code";
     }
 
     setErrors(nextErrors);

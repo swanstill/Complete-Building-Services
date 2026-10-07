@@ -226,6 +226,14 @@ export const siteConfig: SiteConfig = {
         autoComplete: "tel",
         hint: "e.g. 07911 123456 (UK number)",
       },
+      {
+        name: "postcode",
+        label: "Post Code",
+        type: "text",
+        placeholder: "Enter your post code",
+        autoComplete: "postal-code",
+        hint: "e.g. SN2 2AZ",
+      },
     ],
   },
   howItWorks: {
