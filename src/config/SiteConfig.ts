@@ -1,106 +1,79 @@
 import { SiteConfig } from "@/lib/types";
 
 export const siteConfig: SiteConfig = {
-  companyName: "Complete Complete Roofing & Building Services",
+  companyName: "Complete Roofing & Building Services",
   logoImage: "/icons/logo.jpg",
-  logoAltText: "Complete Complete Roofing & Building Services Logo",
-  heroSloganPrimary:
-    "We're Your Local Roofing Company across",
-  heroSloganSecondary: "Family-Run & Fully Accredited",
-  locationPrimary: "Swindon, Royal Wootton Bassett, and nearby towns.",
-  foundedYear: "20+ Years Experience",
-  reviewScore: "9.81/10",
-  reviewCount: "49",
-  guaranteeYears: "All Work Guaranteed",
-  insurredInfo: "Fully Accredited",
-  jobsCompleted: "4,160+ Projects Completed",
+  logoAltText: "Complete Roofing & Building Services",
+  heroSloganPrimary: "Your local roofing team",
+  heroSloganSecondary: "A family-run roofing business",
+  locationPrimary: "Swindon & Royal Wootton Bassett",
+  foundedYear: "Experienced local roofers",
+  // Historical landing-page claims are documented in docs/AUDIT.md.
+  // Do not restore numerical claims until the client confirms them.
+  reviewScore: "",
+  reviewCount: "",
+  guaranteeYears: "All work guaranteed",
+  insurredInfo: "Insurance verified on TrustATrader",
+  jobsCompleted: "",
   phoneNumber: "+44 1793 239742",
-  emailAddress: "info@roofexltd.co.uk",
+  emailAddress: "info@completebuilding-services.co.uk",
   address: "15 Shaftesbury Centre, Percy Street, Swindon, SN2 2AZ",
   ctaTextPrimary: "Get My Free Quote",
   ctaTextSecondary: "Call Us",
   heroImage: "/images/hero-image.jpg",
-  heroImageAltText: "Complete Complete Roofing & Building Services Hero Image",
-  heroTitle:
-    "We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
+  heroImageAltText:
+    "Completed tiled roof from Complete Roofing's project gallery",
+  heroTitle: "Roofers in Swindon & Royal Wootton Bassett",
   heroDescription:
-    "Local roofing experts serving Swindon, Royal Wootton Bassett and the surrounding area with over 20 years of experience, 4,160+ jobs completed, and a 20-year guarantee on every roof.",
+    "Roof repairs, replacements and flat roofing from your local team. Clear advice, a free quote and workmanship you can see.",
   galleryImages: [
-    "/gallery/09090.jpeg",
-    "/gallery/1413.jpeg",
-    "/gallery/234.jpeg",
-    "/gallery/2q24r43.jpeg",
-    "/gallery/341431.jpeg",
-    "/gallery/3545.jpeg",
-    "/gallery/44.jpeg",
-    "/gallery/47900.jpeg",
-    "/gallery/5.jpeg",
-    "/gallery/531776.jpeg",
-    "/gallery/56w57627.jpeg",
-    "/gallery/WhatsApp Image 2025-10-13 at 19.55.22.jpeg",
-    "/gallery/WhatsApp Image 2025-10-13 at 19.55.27.jpeg",
+    "/gallery/project-3.jpg",
+    "/gallery/project-8.jpg",
+    "/gallery/project-12.jpg",
   ],
-  checkatradeRatingImage: "/images/checkatrade-badge.png",
+  checkatradeRatingImage: "/icons/check-trade.png",
   faqData: [
     {
       question: "How do I know if my roof needs repairing?",
       answer:
-        "Common signs include leaks, water stains on ceilings, missing or cracked tiles, sagging roof sections, and damaged flashing around chimneys or vents. If you've noticed any of these issues, we offer a free inspection to assess the condition of your roof and recommend the best course of action.",
+        "Leaks, water stains, missing or cracked tiles and damaged flashing are all reasons to arrange an inspection. We assess the roof and explain what needs attention.",
     },
     {
       question: "Do you offer emergency roof repairs?",
       answer:
-        "Yes, we provide a 24/7 emergency roof repair service across Swindon and surrounding areas. Whether it's storm damage, a sudden leak, or any urgent roofing issue, our team responds quickly to secure your property and prevent further damage. Call us anytime on 01793 239742.",
+        "Yes. Our emergency roofing service operates 24 hours a day, seven days a week across Swindon and Royal Wootton Bassett. Call 01793 239742 to discuss the problem and check availability.",
     },
     {
-      question: "What roofing services do you provide?",
+      question: "Do you offer guarantees?",
       answer:
-        "We offer a full range of roofing services including new roof installations, roof repairs, flat roofing (EPDM rubber, felt, GRP fibreglass), pitched roofs, slate and tile roofing, ridge and hip tile re-bedding, fascias, soffits, guttering, chimney repairs, lead work, dry verge and dry ridge systems, roof windows, and moss removal.",
-    },
-    {
-      question: "How long does a new roof take to install?",
-      answer:
-        "The timeline depends on the size and complexity of the project. A typical residential roof replacement takes between 3 to 7 days. We'll provide a clear timeline with your quote so you know exactly what to expect. Our team works efficiently while maintaining the highest quality standards.",
-    },
-    {
-      question: "Do you offer guarantees on your work?",
-      answer:
-        "Yes, all our work comes with a guarantee for your peace of mind. We use only high-quality materials and our skilled team takes pride in delivering lasting results. We'll discuss the specific guarantee details for your project before any work begins.",
+        "Yes. We explain the workmanship and applicable material guarantees with your quote. Ask the team to confirm the cover, duration and conditions for your particular project.",
     },
     {
       question: "What areas do you cover?",
       answer:
-        "We're based in Swindon and cover Wiltshire and the surrounding areas, including Royal Wootton Bassett, Highworth, Cricklade, and nearby towns. If you're unsure whether we cover your area, get in touch and we'll be happy to help.",
+        "Our core areas are Swindon and Royal Wootton Bassett, with work also undertaken in the surrounding Wiltshire towns and villages. Contact us to check your postcode.",
     },
     {
-      question: "Are you insured and accredited?",
+      question: "Will I have to commit when I request a quote?",
       answer:
-        "Yes, we are fully insured for all the work we carry out. We're proud members of Checkatrade with a 9.81/10 rating from verified reviews. Our team is experienced, professional, and committed to delivering work to the highest industry standards.",
-    },
-    {
-      question: "How much does a roof repair or replacement cost?",
-      answer:
-        "Every project is different, so we offer free, no-obligation quotes tailored to your specific needs. We carry out a thorough inspection first, then provide a detailed breakdown of the work required and the cost. Our pricing is transparent with no hidden fees.",
+        "No. Quotes are free and without obligation. We explain the recommended work and cost so you can decide whether to go ahead.",
     },
   ],
-  brand: {
-    primary: "#FA6237",
-    secondary: "#010203",
-  },
+  brand: { primary: "#FA6237", secondary: "#010203" },
   seo: {
-    baseUrl: "https://peakdaleroofing.co.uk",
-    titleTemplate: "%s | Complete Complete Roofing & Building Services",
-    defaultTitle:
-      "We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
+    baseUrl: "https://complete-building-services-tau.vercel.app",
+    titleTemplate: "%s | Complete Roofing & Building Services",
+    defaultTitle: "Roofers in Swindon & Royal Wootton Bassett",
     description:
-      "Local roofing experts serving Swindon, Royal Wootton Bassett and the surrounding area with over 20 years of experience, 4,160+ jobs completed, and a 20-year guarantee on every roof.",
-    ogImage: "/images/og-default.jpg",
-    twitterHandle: "@peakdaleroofing",
+      "Local roof repairs, roof replacements and flat roofing in Swindon and Royal Wootton Bassett. Request your free, no-obligation quote.",
+    ogImage: "/images/hero-image.jpg",
+    twitterHandle: "",
   },
   reviewsData: {
     source: "Checkatrade",
     sourceImage: "/icons/checkatrade.png",
-    reviewsUrl: "https://www.checkatrade.com/trades/CompleteBuildingServices985447",
+    reviewsUrl:
+      "https://www.checkatrade.com/trades/CompleteBuildingServices985447",
     reviews: [
       {
         name: "Kevin N",
@@ -158,48 +131,12 @@ export const siteConfig: SiteConfig = {
       },
     ],
   },
+
   mjqrReviewsData: {
     source: "My Job Quote",
     sourceImage: "/icons/myjobquote-review.png",
-    reviewsUrl: "https://www.myjobquote.co.uk/t/peakdale-roofing",
-    reviews: [
-      {
-        name: "Stuart",
-        serviceType: "Repair and Replace Broken Patio Slabs",
-        rating: 5,
-        review:
-          "Complete satisfaction, the workmanship and final outcome was exceptional across multiple projects including paving, a garden outbuilding, and fencing. The staff were professional, friendly, helpful and approachable. I would recommend Peakdale to anyone seeking a reliable company.",
-        date: "12 August 2026",
-        postalCode: "",
-      },
-      {
-        name: "Pedro",
-        serviceType: "Kitchen Roof Leak Repair",
-        rating: 5,
-        review:
-          "Excellent work, very professional, fast. They gave me a lot of confidence. Thank you!",
-        date: "21 April 2026",
-        postalCode: "",
-      },
-      {
-        name: "Abbas Ali",
-        serviceType: "Repair Leak and Redecorate Damaged Area",
-        rating: 5,
-        review:
-          "Pat kept me updated with pics and videos and even video call showing me the problems. As a remote landlord, I really valued the communication. They fixed hidden faults free of charge within the original quote and came with a 5-year guarantee.",
-        date: "15 April 2026",
-        postalCode: "",
-      },
-      {
-        name: "Paul",
-        serviceType: "Chimney Flashing and Roof Leak Repair",
-        rating: 5,
-        review:
-          "Pat was polite and kept me informed. No pressure was applied when additional issues were discovered. I received before and after photos and they supply a three year guarantee.",
-        date: "2 April 2026",
-        postalCode: "",
-      },
-    ],
+    reviewsUrl: "",
+    reviews: [],
   },
   formData: {
     formHeading: "Get a Free No-Obligation Quote",
@@ -208,21 +145,21 @@ export const siteConfig: SiteConfig = {
         name: "fullName",
         label: "Full Name",
         type: "text",
-        placeholder: "Enter your full name",
+        placeholder: "Your full name",
         autoComplete: "name",
       },
       {
         name: "email",
         label: "Email Address",
         type: "email",
-        placeholder: "Enter your email address",
+        placeholder: "you@example.co.uk",
         autoComplete: "email",
       },
       {
         name: "phoneNumber",
         label: "Phone Number",
         type: "tel",
-        placeholder: "Enter your phone number",
+        placeholder: "Your phone number",
         autoComplete: "tel",
         hint: "e.g. 07911 123456 (UK number)",
       },
@@ -230,76 +167,67 @@ export const siteConfig: SiteConfig = {
         name: "postcode",
         label: "Post Code",
         type: "text",
-        placeholder: "Enter your post code",
+        placeholder: "Your property postcode",
         autoComplete: "postal-code",
         hint: "e.g. SN2 2AZ",
       },
     ],
   },
   howItWorks: {
-    headline: "Getting Your Roof Sorted Is Easy",
+    headline: "Getting your roof sorted is simple",
     steps: [
       {
         icon: "/icons/receipt.svg",
-        title: "Appointment",
+        title: "Get in touch",
         description:
-          "Schedule in a time that works for you, so we can visit your property and assess what works needs to be done.",
+          "Tell us about your roof. We'll arrange a convenient time to take a look.",
       },
       {
         icon: "/icons/search-check.svg",
-        title: "Provide Quote",
+        title: "Get a clear quote",
         description:
-          "You'll be provided with a detailed quote of the work you need and how much it will cost to be completed.",
+          "We explain what we've found, the work needed and what it will cost.",
       },
       {
         icon: "/icons/clipboard-check.svg",
-        title: "Job Completion",
+        title: "We get to work",
         description:
-          "We'll complete the job quickly and efficiently, keeping high standards with no mess left behind.",
+          "Our team carries out the agreed work and leaves your property tidy.",
       },
       {
         icon: "/icons/handshake.svg",
-        title: "After Care",
+        title: "Feel looked after",
         description:
-          "We'll be checking in with you to answer any questions and make sure you're happy with your service.",
+          "We explain the aftercare and guarantees, and answer your questions.",
       },
     ],
   },
   workGallery: {
-    headline: "Recent Projects Completed",
-    caption: "Quality work delivered by Complete Complete Roofing & Building Services",
-    images: [
-      "/gallery/project-1.jpg",
-      "/gallery/project-2.jpg",
-      "/gallery/project-3.jpg",
-      "/gallery/project-4.jpg",
-      "/gallery/project-5.jpg",
-      "/gallery/project-6.jpg",
-      "/gallery/project-7.jpg",
-      "/gallery/project-8.jpg",
-      "/gallery/project-9.jpg",
-      "/gallery/project-10.jpg",
-      "/gallery/project-11.jpg",
-      "/gallery/project-12.jpg",
-    ],
+    headline: "Local roofs. Real craftsmanship.",
+    caption: "Projects from our existing company gallery",
+    images: Array.from({ length: 12 }, (_, i) =>
+      i === 1
+        ? "/gallery/roof-ridge-tiling.webp"
+        : "/gallery/project-" + (i + 1) + ".jpg",
+    ),
   },
   ownerInfo: {
-    headline: "Meet Pat",
-    text: "“Hi, I'm Pat and I've been roofing in Swindon, Royal Wootton Bassett and the surrounding area for over 20 years. If I wouldn't accept it on my own home, it doesn't go on yours.”",
+    headline: "Meet Layton and the team",
+    text: "A local, family-run roofing business.",
     bulletPoints: [
-      "4,160+ Projects Completed Locally",
-      "9.81/10 Verified Checkatrade Reviews",
-      "20-Year Guarantee & Fixed Pricing",
+      "Our own in-house team",
+      "Free, no-obligation quotes",
+      "Work guaranteed",
     ],
-    ownerImage: "/images/team-image.jpeg",
+    ownerImage: "/images/owner-image.jpg",
   },
   cta: {
-    headline: "Ready to Get Started?",
-    subtitle: "Get your free, no-obligation roofing quote today.",
+    headline: "Let's take care of your roof.",
+    subtitle: "Start with a free, no-obligation quote.",
     buttonPrimary: "Get My Free Quote",
     buttonSecondary: "Call Us",
     buttonPrimaryUrl: "#quote-form",
     buttonSecondaryUrl: "tel:+441793239742",
-    caption: "Honest pricing | No hidden fees | 20-Year guarantee",
+    caption: "Free quotes · Work guaranteed",
   },
 };

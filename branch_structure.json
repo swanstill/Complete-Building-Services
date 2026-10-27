@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "codex/multi-page-expansion",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "codex/multi-page-expansion": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "codex/multi-page-expansion",
+    "origin"
+  ]
+}

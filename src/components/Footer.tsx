@@ -1,70 +1,79 @@
 import { siteConfig } from "@/config/SiteConfig";
+import { navigation, website } from "@/config/website";
 import Link from "next/link";
 import Image from "next/image";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-black py-10 px-10 tracking-wide">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-wrap items-center md:justify-between max-md:flex-col gap-6">
+    <footer className="site-footer">
+      <div className="shell">
+        <div className="footer-grid">
           <div>
-            <Image
-              src={siteConfig.logoImage}
-              alt={siteConfig.logoAltText}
-              className="h-15 w-auto shrink-0 object-left object-contain"
-              height={200}
-              width={370}
-            />
-          </div>
-
-          <div className="text-white text-base max-md:text-center">
-            {siteConfig.address}
-          </div>
-
-          <ul className="flex items-center justify-center flex-wrap gap-y-2 md:justify-end space-x-6 text-white">
-            <Link
-              href={`tel:${siteConfig.phoneNumber}`}
-              className="flex items-center gap-1"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-phone-icon lucide-phone"
-              >
-                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
-              </svg>
-              <li>{siteConfig.phoneNumber}</li>
+            <Link href="/">
+              <Image
+                src={siteConfig.logoImage}
+                alt={siteConfig.logoAltText}
+                width={280}
+                height={108}
+                className="footer-logo"
+              />
             </Link>
-
-          </ul>
+            <p>
+              Roofing for the place
+              <br />
+              you call home.
+            </p>
+          </div>
+          <div>
+            <h2>Explore</h2>
+            <nav aria-label="Footer navigation">
+              {navigation.map((l) => (
+                <Link key={l.href} href={l.href}>
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div>
+            <h2>Get in touch</h2>
+            <a
+              className="footer-phone"
+              href={website.phoneHref}
+              data-placement="footer"
+            >
+              {website.phoneDisplay}
+            </a>
+            <a
+              className="footer-email"
+              href={"mailto:" + siteConfig.emailAddress}
+            >
+              {siteConfig.emailAddress}
+            </a>
+            <address>{siteConfig.address}</address>
+          </div>
+          <div>
+            <h2>Our local area</h2>
+            {website.areas.map((a) => (
+              <p key={a}>{a}</p>
+            ))}
+            <Link href="/contact/#emergency-roofing">
+              24/7 emergency roofing ↗
+            </Link>
+          </div>
         </div>
-
-        <hr className="my-6 border-gray-500" />
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <p className="text-gray-300 text-base md:w-1/3 max-md:text-center">
-            © {siteConfig.companyName}. All rights reserved.
-          </p>
-          <div className="md:w-1/3"></div>
-          <Link
+        <div className="footer-bottom">
+          <span>
+            © {new Date().getFullYear()} {siteConfig.companyName}
+          </span>
+          <a
             href="https://www.tradesgrow.co.uk/"
             target="_blank"
-            className="md:w-1/3 flex justify-end"
+            rel="noreferrer"
           >
-            <p className="text-white underline">
-              Website design with ♥ by Trades Grow
-            </p>
-          </Link>
+            Website by Trades Grow ↗
+          </a>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

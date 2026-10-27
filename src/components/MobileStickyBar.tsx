@@ -1,77 +1,46 @@
 "use client";
-import { siteConfig } from "@/config/SiteConfig";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { website } from "@/config/website";
 
-const PhoneIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    className="shrink-0"
-  >
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-  </svg>
-);
-
-const QuoteIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-    className="shrink-0"
-  >
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-    <path d="M14 2v6h6" />
-    <path d="M9 15h6" />
-    <path d="M9 11h2" />
-  </svg>
-);
-
-const MobileStickyBar = () => {
+export default function MobileStickyBar() {
+  const pathname = usePathname();
+  const [editing, setEditing] = useState(false);
+  useEffect(() => {
+    const onFocus = () =>
+      setEditing(
+        document.activeElement?.matches("input, textarea, select") || false,
+      );
+    document.addEventListener("focusin", onFocus);
+    document.addEventListener("focusout", onFocus);
+    return () => {
+      document.removeEventListener("focusin", onFocus);
+      document.removeEventListener("focusout", onFocus);
+    };
+  }, []);
   return (
-    <div
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 px-3 pt-2 md:hidden"
-      style={{
-        backgroundColor: siteConfig.brand.secondary,
-        paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))",
-      }}
+    <aside
+      className="mobile-call-bar"
+      aria-label="Quick contact"
+      hidden={editing}
     >
-      <div className="flex gap-3">
-        <a
-          href={`tel:${siteConfig.phoneNumber}`}
-          className="flex flex-1 items-center justify-center gap-2 py-3 rounded-full font-bold text-white text-sm md:text-base transition active:scale-95"
-          style={{ backgroundColor: siteConfig.brand.primary }}
-        >
-          <PhoneIcon />
-          Call Now
-        </a>
-        <a
-          href="#quote-form"
-          className="flex flex-1 items-center justify-center gap-2 py-3 rounded-full font-bold text-sm md:text-base transition active:scale-95"
-          style={{
-            backgroundColor: "#ffffff",
-            color: siteConfig.brand.secondary,
-          }}
-        >
-          <QuoteIcon />
-          Free Quote
-        </a>
-      </div>
-    </div>
+      <a
+        href={website.phoneHref}
+        data-placement="mobile-sticky"
+        className="button button-dark"
+      >
+        <span aria-hidden="true">☎</span> Call now
+      </a>
+      <a
+        href={
+          pathname.startsWith("/thank-you")
+            ? "/contact/#quote-form"
+            : "#quote-form"
+        }
+        className="button button-primary"
+      >
+        Free quote <span aria-hidden="true">↗</span>
+      </a>
+    </aside>
   );
-};
-
-export default MobileStickyBar;
+}

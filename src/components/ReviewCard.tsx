@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 interface ReviewCardProps {
   review: {
@@ -73,7 +74,7 @@ const ReviewCard = ({ review, sourceImage, sourceAlt }: ReviewCardProps) => {
           </div>
         </div>
 
-        <img
+        <Image
           src={sourceImage || "/icons/checkatrade-review.png"}
           alt={sourceAlt || "Checkatrade"}
           className="w-8 h-8 shrink-0 object-contain"
