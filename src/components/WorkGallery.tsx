@@ -1,42 +1,54 @@
 import { siteConfig } from "@/config/SiteConfig";
 import Image from "next/image";
 
-const WorkGallery = () => {
+const captions = [
+  "Roof windows",
+  "Roof ridge and tiling",
+  "Tiled roof detail",
+  "Chimney repairs",
+  "Slate roof installation",
+  "Completed roofing",
+  "Before and after",
+  "Membrane and battens",
+  "Dry ridge detail",
+  "Safe access for roof work",
+  "Valley repairs",
+  "Roof renewal",
+];
+export default function WorkGallery() {
   return (
-    <section
-      id="work-gallery"
-      className="py-12 md:py-16"
-      style={{ backgroundColor: siteConfig.brand.primary }}
-    >
-      <div className="max-w-5xl mx-auto text-center px-4 mb-8">
-        <h2 className="text-2xl md:text-4xl font-bold text-white mb-2">
-          {siteConfig.workGallery.headline}
-        </h2>
-        <p className="text-white/80 text-base md:text-lg">
-          {siteConfig.workGallery.caption}
-        </p>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-          {siteConfig.workGallery.images.map((image, index) => (
-            <div
-              key={index}
-              className="relative w-full overflow-hidden"
-              style={{ aspectRatio: "4/3" }}
-            >
-              <Image
-                src={image}
-                alt={`Roofing project ${index + 1}`}
-                fill
-                className="object-cover object-center hover:scale-105 transition-transform duration-500"
-              />
-            </div>
+    <section id="work-gallery" className="section gallery-section">
+      <div className="shell">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">OUR WORK, UP CLOSE</p>
+            <h2>
+              Local roofs.
+              <br />
+              Real craftsmanship.
+            </h2>
+          </div>
+          <p>
+            A closer look at projects from our existing gallery, from the
+            preparation underneath to the finishing details.
+          </p>
+        </div>
+        <div className="project-grid">
+          {siteConfig.workGallery.images.map((src, i) => (
+            <figure key={src}>
+              <div>
+                <Image
+                  src={src}
+                  alt={captions[i] + " from Complete Roofing's project gallery"}
+                  fill
+                  sizes="(max-width: 600px) 50vw, 25vw"
+                />
+              </div>
+              <figcaption>{captions[i]}</figcaption>
+            </figure>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default WorkGallery;
+}

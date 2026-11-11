@@ -16,6 +16,7 @@ export async function POST(request: Request) {
       postcode,
       propertyType,
       timeframe,
+      serviceType,
     } = body ?? {};
 
     if (!fullName || !email || !phoneNumber) {
@@ -52,6 +53,9 @@ export async function POST(request: Request) {
       postcode ? `Postcode: ${postcode}` : null,
       propertyType ? `Property: ${propertyType}` : null,
       timeframe ? `Timeframe: ${timeframe}` : null,
+      typeof serviceType === "string" && serviceType
+        ? `Service: ${serviceType.slice(0, 100).replace(/[\r\n]/g, " ")}`
+        : null,
     ]
       .filter(Boolean)
       .join("\n");
@@ -72,8 +76,7 @@ export async function POST(request: Request) {
     });
   } catch (err) {
     console.error("Twilio send error:", err);
-    const detail =
-      err instanceof Error ? err.message : "Unexpected error";
+    const detail = err instanceof Error ? err.message : "Unexpected error";
     return new Response(
       process.env.NODE_ENV === "development" ? detail : "Failed to send SMS",
       { status: 502 },

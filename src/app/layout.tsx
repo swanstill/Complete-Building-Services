@@ -2,20 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import MobileStickyBar from "@/components/MobileStickyBar";
-import { Inter, Poppins } from "next/font/google";
-const inter = Inter({
+import { DM_Sans } from "next/font/google";
+import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
+import { siteConfig } from "@/config/SiteConfig";
+import { website } from "@/config/website";
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
-});
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
+  display: "swap",
+  variable: "--font-dm-sans",
 });
 export const metadata: Metadata = {
-  title: "Complete Complete Roofing & Building Services - We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
-  description: "Complete Complete Roofing & Building Services - We're Your Local Roofing Company across Swindon, Royal Wootton Bassett, and nearby towns.",
+  metadataBase: new URL(siteConfig.seo.baseUrl),
+  title: {
+    default: siteConfig.seo.defaultTitle,
+    template: siteConfig.seo.titleTemplate,
+  },
+  description: siteConfig.seo.description,
 };
 
 export default function RootLayout({
@@ -23,11 +26,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html lang="en">
+    <html lang="en-GB">
       <head>
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager: retain the existing snippet and container. */}
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -39,7 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${inter.className} ${poppins.className} pb-20 md:pb-0`}>
+      <body className={`${dmSans.className} ${dmSans.variable}`}>
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -49,8 +52,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <Header />
-        {children}
+        <main id="main-content">{children}</main>
+        <Footer />
+        <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "RoofingContractor",
+              "@id": `${siteConfig.seo.baseUrl}/#business`,
+              name: siteConfig.companyName,
+              url: siteConfig.seo.baseUrl,
+              telephone: siteConfig.phoneNumber,
+              email: siteConfig.emailAddress,
+              image: `${siteConfig.seo.baseUrl}${siteConfig.heroImage}`,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "15 Shaftesbury Centre, Percy Street",
+                addressLocality: "Swindon",
+                postalCode: "SN2 2AZ",
+                addressCountry: "GB",
+              },
+              areaServed: website.areas,
+              sameAs: [
+                website.trustatraderUrl,
+                siteConfig.reviewsData.reviewsUrl,
+              ],
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
         <MobileStickyBar />
       </body>
     </html>

@@ -1,30 +1,38 @@
 import { siteConfig } from "@/config/SiteConfig";
-import HowitWorksCard from "./HowitWorksCard";
-
-const HowItworks = () => {
+export default function HowItworks({ steps }: { steps?: string[] }) {
   return (
-    <section id="how-it-works" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            {siteConfig.howItWorks.headline}
-          </h2>
+    <section className="section process-section" id="how-it-works">
+      <div className="shell">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">FROM FIRST CALL TO FINISHED ROOF</p>
+            <h2>
+              Getting your roof
+              <br />
+              sorted is simple.
+            </h2>
+          </div>
+          <p>Know what happens next, before you commit to anything.</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {siteConfig.howItWorks.steps.map((step, index) => (
-            <HowitWorksCard
-              key={index}
-              title={step.title}
-              description={step.description}
-              icon={step.icon}
-              index={index}
-            />
+        <ol className="process-grid">
+          {siteConfig.howItWorks.steps.map((s, i) => (
+            <li key={s.title}>
+              <span className="process-number">0{i + 1}</span>
+              <h3>
+                {steps
+                  ? [
+                      "Tell us about your roof",
+                      "Assess the options",
+                      "Agree the work",
+                      "Completion and aftercare",
+                    ][i]
+                  : s.title}
+              </h3>
+              <p>{steps?.[i] || s.description}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );
-};
-
-export default HowItworks;
+}
